@@ -1,16 +1,13 @@
 mapboxgl.accessToken = 'pk.eyJ1IjoibXNwYXJrczcxNCIsImEiOiJjazZsZjl0aXAwYmMzM21uMHpmNjcxMzFoIn0.yMKMcXRxt0QzELn7THF_8g';
 
 
-// create an object to hold the initialization options for a mapboxGL map
-var initOptions = {
-  container: 'map-container', // put the map in this container
+// create the new map
+var map = new mapboxgl.Map({
+    container: 'map-container', // put the map in this container
   style: 'mapbox://styles/mapbox/light-v10', // use this basemap
   center: [-8.961439, 48.535493], // initial view center
   zoom: 10.76, // initial view zoom level (0-18)
-};
-
-// create the new map
-var map = new mapboxgl.Map(initOptions);
+});
 
 // add zoom and rotation controls to the map.
 map.addControl(new mapboxgl.NavigationControl());
