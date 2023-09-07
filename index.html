@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Kompetenzlandkarte Baden-Wuerttemburg</title>
+    <meta name="description" content="The HTML5 Herald">
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.7.0/mapbox-gl.css' rel='stylesheet' />
+    <link href='css/styles.css' rel='stylesheet' />
+    <script src="https://api.mapbox.com/mapbox-gl-js/v1.9.0/mapbox-gl.js"></script>
+  </head>
+  <body>
+    <!-- this is the map container-->
+    <div id='map-container'></div>
+
+
+    <!-- the sidebar is fixed width and will contain a title, some text, and buttons -->
+    <div id="sidebar" class="tabbed-sidebar">
+      <h3>Kompetenzlandkarte Baden-Wuerttemburg</h3>
+       <ul class="sidebar-tabs">
+         <li id="t1" class="sidebar-tab t1"><a class="sidebar-tab t1" title="Tab 1">Introduktion </a></li>
+         <li id="t2" class="sidebar-tab t2"><a class="sidebar-tab t2" title="Tab 2">Universität Specific Info </a></li>
+         <li id="t3" class="sidebar-tab t3"><a class="sidebar-tab t3" title="Tab 3">Hochschulen Info </a></li>
+         <li id="t4" class="sidebar-tab t4"><a class="sidebar-tab t4" title="Tab 4">Kontake und Fragen</a></li>
+    <ul>
+
+       <!-- tab 1-->
+           <div class="sidebar-tab-content sidebar-tab-content-t1">
+
+           <!--Put content for each tab here -->
+           <ul>
+               We can put whatever information you all think is necessary here to give some quick information about either the lap or how they can contact, or w
+               or what the purpose is. We can also change how many buttons are on the left side. 
+              <p>We can add additional paragraphs of information so that people can follow along most easily</p>
+              <p> Final optional place that we can put information on...also do we want the buttons for flying to places or do we see that 
+                as unnecessary? I can easily take them out of we can somehow make them the top big cities or something, up to you. </p>
+
+              <!-- Buttons for flying the map -->
+              <button class='flyto-button' id="losangeles">✈️ Los Angeles, CA</button>
+              <br/>
+              <button class='flyto-button' id="anchorage">✈️ Anchorage, AK</button>
+              <br/>
+              <button class='flyto-button' id="oklahomacity">✈️ Oklahoma City, OK</button>
+              <br/>
+              <button class='flyto-button' id="phoenix">✈️ Phoenix, AZ</button>
+              <br/>
+              <button class='flyto-button' id="nyc">🗽 NYC, NY</button>
+            </ul>
+          </div>
+
+      <!-- tab 2-->
+    <div class="sidebar-tab-content sidebar-tab-content-t2">
+        <!--Put content for each tab here -->
+      <ul>
+        <p><h2><u>Do we even need this text? Let me know! </u></h2></p>
+            <p>"Los Angeles has an estimated 10,105,722 residents in
+              their metropolitan area. 95,902 of those are members of a tribe,
+              accounting for .95% of the overall city's population, but that
+              is where 21.6% of all Native peoples in California reside.
+              For more information about LA, check out their
+              <a href="https://www.lacity.org/support-for-residents">City Website<a></p>
+          <p><h2><u>Anchorage</u></h2></p>
+              <p> Did you know that 15% of all people who live in Alaska are Native?
+                Of Anchorage's 298,225 people, 28,751 are Indigenous peoples which means that
+                25.2% of all Native people in Alaska actually live in Anchorage. The other
+                three-quarter live in small villages dispersed about the state. Zoom in close
+                to see individual village names and populations. Learn more about Anchorage
+                <a href="https://www.muni.org/pages/default.aspx">here.<a></p>
+          <p><h2><u>Oklahoma City</u></h2></p>
+            <p> Oklahoma is dervied from a word in the Choctaw language that translates into
+              "Red People" and was an attempt to create an all Indian state. Not surprisingly
+              only 7.56% of Oklahoma City's residents are Native Americans, as most live on
+              reservations and protected lands in the North Western part of the state. To learn
+              more about the Tribes in Oklahoma go
+              <a href="https://www.okhistory.org/research/oktribes">here.<a></p>
+          <p><h2><u>Phoenix</u></h2></p>
+            <p> Phoenix is another interesting place, as some of the largest tribal areas
+              exist in the American Southwest. The Navajo Nation alone has 157,716 residents.
+              Of Phoenix's population, 27.93% of urbannites are Native, but that is only 2.11%
+              of Native residents of Arizona--meaning most live outside of the city.
+              Learn more about <a href="https://www.phoenix.gov/">Phoenix.<a></p>
+          <p><h2><u>New York City</u></h2></p>
+            <p> The city of Dreams, some say. The Big Apple boasts the largest number (38,845) of
+              Native residents over any other city in the United States. With that being said,
+              only .454% of the State identify as Native American, and of that amount, 45.66% live
+              in one of the five boroughs. This only means that of the Native peoples in NYS, almost
+              half live in <a href="https://www1.nyc.gov/">NYC.<a></p>
+      </ul>
+    </div>
+
+    <!-- tab 3-->
+    <div class="sidebar-tab-content sidebar-tab-content-t3">
+        <!--Put content for each tab here -->
+      <ul>
+        <p> "The U.S. government officially recognizes
+          <a href="https://www.federalregister.gov/documents/2019/02/01/2019-00897/indian-entities-recognized-by-and-eligible-to-receive-services-from-the-united-states-bureau-of">nearly 600 Indian tribes<a>
+          in the contiguous 48 states and Alaska. These federally recognized tribes are eligible for funding and
+          services from the Bureau of Indian Affairs, either directly or through contracts, grants, or compacts.
+          The <a href="https://www.bia.gov/"> Bureau of Indian Affairs <a> provides contact information for each tribe's
+            <a href="https://www.bia.gov/tribal-leaders-directory">Tribal Leader.<a>"
+          <p>Directly taken from: https://www.usa.gov/tribes.</p>
+
+</p>
+
+      </ul>
+    </div>
+
+
+<!-- tab 4-->
+<div class="sidebar-tab-content sidebar-tab-content-t4">
+    <!--Put content for each tab here -->
+  <ul>
+    <p>This website was created as an extension of the Baden Baden-Wuerttemburg institute for Sustainable Mobility
+    or BWIM. Please feel free to reach out additional correct any information, or if you would like to be featured 
+    on the map. We will update the data source on a quarterly basis. All websites, datasets, and historical information is referenced in my code, once you click 'inspect'.
+
+     </aside> </p>
+  </ul>
+</div>
+
+    </ul>
+
+</div><!-- tabbed-sidebar -->
+
+
+
+
+    <!-- Load mapboxGL, jQuery, then our local javascript files -->
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.7.0/mapbox-gl.js'></script>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"></script>
+    <script src='data/cities.geojson'></script>
+    <script src='js/scripts.js'></script>
+  <body>
+</html>
