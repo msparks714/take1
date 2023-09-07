@@ -3,14 +3,14 @@ mapboxgl.accessToken = 'pk.eyJ1IjoibXNwYXJrczcxNCIsImEiOiJjazZsZjl0aXAwYmMzM21uM
 // we want to return to this point and zoom level after the user interacts
 // with the map, so store them in variables
 var initialCenterPoint = [-8.961439, 48.535493]; 
-var initialZoom = 22.4;
+var initialZoom = 10.76;
 
 // create an object to hold the initialization options for a mapboxGL map
 var initOptions = {
   container: 'map-container', // put the map in this container
   style: 'mapbox://styles/mapbox/light-v10', // use this basemap
-  center: initialCenterPoint, // initial view center
-  zoom: initialZoom, // initial view zoom level (0-18)
+  center: [-8.961439, 48.535493], // initial view center
+  zoom: 10.76, // initial view zoom level (0-18)
 };
 
 // create the new map
