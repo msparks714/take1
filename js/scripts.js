@@ -23,76 +23,7 @@ var map = new mapboxgl.Map(initOptions);
 map.addControl(new mapboxgl.NavigationControl());
 
 
-  //add each city as a sprite
-  map.addSource('points', {
-    'type': 'geojson',
-    'data': {
-      'type': 'FeatureCollection',
-      'features': [
-        {
-          // feature for OKC
-          'type': 'Feature',
-          'geometry': {
-            'type': 'Point',
-            'coordinates': [-97.5164, 35.4676]
-           },
-          'properties': {
-            'title': 'Oklahoma City',
-            'icon': 'viewpoint'
-          }
-        },
 
-        {
-          // feature for NYC
-          'type': 'Feature',
-          'geometry': {
-            'type': 'Point',
-            'coordinates': [-74.006,	40.7128]
-          },
-          'properties': {
-            'title': 'NYC',
-            'icon': 'harbor'
-          }
-        },
-        {
-          // feature for Anchorage
-          'type': 'Feature',
-          'geometry': {
-            'type': 'Point',
-            'coordinates': [-149.003,	61.2181]
-          },
-          'properties': {
-            'title': 'Anchorage',
-            'icon': 'park'
-          }
-        },
-        {
-          // feature for Phoenix
-          'type': 'Feature',
-          'geometry': {
-            'type': 'Point',
-            'coordinates': [-112.074,	33.4484]
-          },
-          'properties': {
-            'title': 'Phoenix',
-            'icon': 'volleyball'
-          }
-        },
-        {
-          // feature for Los Angeles
-          'type': 'Feature',
-          'geometry': {
-            'type': 'Point',
-            'coordinates': [-118.2437,	34.0522]
-          },
-          'properties': {
-            'title': 'Los Angeles',
-            'icon': 'fire-station'
-          }
-        }
-      ]
-    }
-  });
 
   map.addLayer({
     'id': 'citydata',
