@@ -20,13 +20,6 @@ var map = new mapboxgl.Map(initOptions);
 map.addControl(new mapboxgl.NavigationControl());
 
 
-// wait for the initial style to Load
-map.on('style.load', function();
-
-
-map.setPaintProperty('water','fill-color', '#9CC6D2')
-
-
   map.addLayer({
     'id': 'citydata',
     'type': 'symbol',
