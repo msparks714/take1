@@ -2,7 +2,7 @@ mapboxgl.accessToken = 'pk.eyJ1IjoibXNwYXJrczcxNCIsImEiOiJjazZsZjl0aXAwYmMzM21uM
 
 // we want to return to this point and zoom level after the user interacts
 // with the map, so store them in variables
-var initialCenterPoint = [-15.97915, 48.535493];
+var initialCenterPoint = [9.97915, 47.535493];
 var initialZoom = 8.67;
 
 // create an object to hold the initialization options for a mapboxGL map
@@ -19,7 +19,81 @@ var map = new mapboxgl.Map(initOptions);
 // add zoom and rotation controls to the map.
 map.addControl(new mapboxgl.NavigationControl());
 
+map.setPaintProperty('water','fill-color', '#9CC6D2')
 
+
+  //add each city as a sprite
+  map.addSource('points', {
+    'type': 'geojson',
+    'data': {
+      'type': 'FeatureCollection',
+      'features': [
+        {
+          // feature for OKC
+          'type': 'Feature',
+          'geometry': {
+            'type': 'Point',
+            'coordinates': [-97.5164, 35.4676]
+           },
+          'properties': {
+            'title': 'Oklahoma City',
+            'icon': 'viewpoint'
+          }
+        },
+
+        {
+          // feature for NYC
+          'type': 'Feature',
+          'geometry': {
+            'type': 'Point',
+            'coordinates': [-74.006,	40.7128]
+          },
+          'properties': {
+            'title': 'NYC',
+            'icon': 'harbor'
+          }
+        },
+        {
+          // feature for Anchorage
+          'type': 'Feature',
+          'geometry': {
+            'type': 'Point',
+            'coordinates': [-149.003,	61.2181]
+          },
+          'properties': {
+            'title': 'Anchorage',
+            'icon': 'park'
+          }
+        },
+        {
+          // feature for Phoenix
+          'type': 'Feature',
+          'geometry': {
+            'type': 'Point',
+            'coordinates': [-112.074,	33.4484]
+          },
+          'properties': {
+            'title': 'Phoenix',
+            'icon': 'volleyball'
+          }
+        },
+        {
+          // feature for Los Angeles
+          'type': 'Feature',
+          'geometry': {
+            'type': 'Point',
+            'coordinates': [-118.2437,	34.0522]
+          },
+          'properties': {
+            'title': 'Los Angeles',
+            'icon': 'fire-station'
+          }
+        }
+      ]
+    }
+  });
+
+  
   map.addLayer({
     'id': 'citydata',
     'type': 'symbol',
