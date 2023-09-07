@@ -19,28 +19,6 @@ var map = new mapboxgl.Map(initOptions);
 // add zoom and rotation controls to the map.
 map.addControl(new mapboxgl.NavigationControl());
 
-// wait for the initial style to Load
-map.on('style.load', function() {
-  //add a layer for your custom source//
-  map.addSource('Res', {
-    type:'geojson',
-    data:'data/Res.geojson',
-  });
-
-  // add a layer for our custom source
-  // Have to include the `stops` key and you can't use the value `null` as one of the stops. Need to use all one type of
-  // value, in this case strings.
-  map.addLayer({
-    id: 'fill-Res',
-    type: 'fill',
-    source: 'Res',
-    paint: {
-      'fill-color': "#760505",
-      'fill-opacity': 0.8
-    }
-  });
-map.setPaintProperty('water','fill-color', '#9CC6D2')
-
 
   //add each city as a sprite
   map.addSource('points', {
@@ -219,7 +197,4 @@ $j('div.tabbed-sidebar ul.sidebar-tabs li a').click(function(){
     $j('#' + parentId + '.tabbed-sidebar div.sidebar-tab-content-' + thisClass).show();
     $j('#' + parentId + '.tabbed-sidebar ul.sidebar-tabs li a').removeClass('tab-current');
     $j(this).addClass('tab-current');
-})
-
-
 });
