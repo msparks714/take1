@@ -1,7 +1,5 @@
 mapboxgl.accessToken = 'pk.eyJ1IjoibXNwYXJrczcxNCIsImEiOiJjazZsZjl0aXAwYmMzM21uMHpmNjcxMzFoIn0.yMKMcXRxt0QzELn7THF_8g';
 
-mapboxgl.accessToken = 'pk.eyJ1IjoibXNwYXJrczcxNCIsImEiOiJjazZsZjl0aXAwYmMzM21uMHpmNjcxMzFoIn0.yMKMcXRxt0QzELn7THF_8g';
-
 // we want to return to this point and zoom level after the user interacts
 // with the map, so store them in variables
 var initialCenterPoint = [-8.961439, 48.535493];
@@ -18,11 +16,15 @@ var initOptions = {
 // create the new map
 var map = new mapboxgl.Map(initOptions);
 
-
 // add zoom and rotation controls to the map.
 map.addControl(new mapboxgl.NavigationControl());
 
 
+// wait for the initial style to Load
+map.on('style.load', function();
+
+
+map.setPaintProperty('water','fill-color', '#9CC6D2')
 
 
   map.addLayer({
